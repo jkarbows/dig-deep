@@ -254,7 +254,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
     var amount = 20;
     return {
         dispense: function() {
-            if (amount > 0) }
+            if (amount > 0) {
                 amount -= 1;
                 alert('delicious pez!');
             } else {
