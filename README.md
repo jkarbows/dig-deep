@@ -190,7 +190,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [5.13](#5.13) <a name='5.13'></a> There is no hard limit on line length but be reasonable. If you need a number then 80 or 120 characters, including whitespace, are common restrictions.
 
-  - [5.14](#5.14) <1 name='5.14'></a> Split line positioning for expressions and methods:
+  - [5.14](#5.14) <a name='5.14'></a> Split line positioning for expressions and methods:
   ```javascript
   var someExpression = Expression1
       + Expression2
