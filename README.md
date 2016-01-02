@@ -2,9 +2,9 @@
 Group entry to the 2015 EMU hackathon. Small 3D dungeon crawler type game made with three.js
 -
 * Jeremy Karbowski [@jkarbows](http://twitter.com/jkarbows), [github](https://github.com/jkarbows)
-* Ray Willett [@RayWillett1](https://twitter.com/RayWillett1), [github](https://github.com/RayWillett)
+* Ray Willett [@RayWillett](https://www.linkedin.com/in/raymond-willett-ba772b107), [github](https://github.com/RayWillett)
 * Martese Goosby [@magmachocolate](https://soundcloud.com/martese-goosby), [github](https://github.com/marteseg)
-* Cody Hill [@???](https://www.google.com/), [github](https://www.google.com/)
+* Cody Hill [@???](http://people.emich.edu/chill34/), [github](https://www.google.com/)
 
 ## What is this?
 
