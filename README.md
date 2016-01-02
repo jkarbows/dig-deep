@@ -55,7 +55,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [2.2](#2.2) <a name='2.2'></a> Whether you use single or double quotations. If double quotations are used, single quotes are allowed for inner quotes.
   
-  I honestly don't care which we use, but we should decide and replace this line with that decision.
+  After a thoughtful discussion, the main collaborators for this project have settled on the single quote style.
 
 ## Naming
   - [3.1](#3.1) <a name='3.1'></a> Names should be written in short, simple, descriptive English.
@@ -155,42 +155,42 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   var reefs = [];
   ```
 
-  - [4.2](#4.2) <a name='4.2'></a> initialize variable where they're declared, even if it's null
+  - [4.2](#4.2) <a name='4.2'></a> Initialize variables where they're declared, even if it's a null declaration.
   ```javascript
-  
+  var someObject = {};
   ```
 
 ## Formatting
 
-  - [5.1](#5.1) <a name='5.1'></a> ALWAYS use brackets and semicolons where applicable
+  - [5.1](#5.1) <a name='5.1'></a> ALWAYS use brackets and semicolons where applicable.
   
-  - [5.2](#5.2) <a name='5.2'></a> related variables of the same type should be declared in a common statement, unrelated variables or those of different type must have a separate var declaration
+  - [5.2](#5.2) <a name='5.2'></a> Related variables of the same type should be declared in a common statement. Unrelated variables or those of different type must have a separate var declaration.
   
-  - [5.3](#5.3) <a name='5.3'></a> floating point constants should always be named with at least one number before and after the decimal point
+  - [5.3](#5.3) <a name='5.3'></a> Floating point constants should always be named with at least one number before and after the decimal point.
   
-  - [5.4](#5.4) <a name='5.4'></a> an effort should be made to contain scope for the purpose of keeping variables alive for the smallest amount of time possible
+  - [5.4](#5.4) <a name='5.4'></a> An effort should be made to contain scope for the purpose of keeping variables alive for the smallest amount of time possible.
   
-  - [5.5](#5.5) <a name='5.5'></a> commas should be followed by a space or newline
+  - [5.5](#5.5) <a name='5.5'></a> Commas should be followed by a space or newline.
   
-  - [5.6](#5.6) <a name='5.6'></a> no preceding space on commas or semicolons
+  - [5.6](#5.6) <a name='5.6'></a> No preceding space on commas or semicolons.
   
-  - [5.7](#5.6) <a name='5.7'></a> no whitespace at eol or on blank lines
+  - [5.7](#5.6) <a name='5.7'></a> No whitespace at eol or on blank lines.
   
-  - [5.8](#5.8) <a name='5.8'></a> unary operators(!, ++) should not have a space next to their operator
+  - [5.8](#5.8) <a name='5.8'></a> Unary operators(!, ++) should not have a space next to their operator.
   
-  - [5.8](#5.8) <a name='5.8'></a> semicolons used as statement terminators should be followed by eol
+  - [5.8](#5.8) <a name='5.8'></a> Semicolons used as statement terminators should be followed by a newline.
   
-  - [5.9](#5.9) <a name='5.9'></a> avoid filler spaces, especially in empty constructs({}, [], function())
+  - [5.9](#5.9) <a name='5.9'></a> Avoid filler spaces, especially in empty constructs({}, [], function()).
   
-  - [5.10](#5.10) <a name='5.10'></a> assignment operators should have a space on either side
+  - [5.10](#5.10) <a name='5.10'></a> Assignment operators should have a space on either side.
   
-  - [5.11](#5.11) <a name='5.11'></a> ternary conditionals should have a space on either side of their operators
+  - [5.11](#5.11) <a name='5.11'></a> Ternary conditionals should have a space on either side of their operators.
   
-  - [5.12](#5.12) <a name='5.12'></a> logical units within a block separated by one blank line
+  - [5.12](#5.12) <a name='5.12'></a> Logical units within a block should be separated by one blank line.
   
-  - [5.13](#5.13) <a name='5.13'></a> no hard length on line limit but be reasonable. if you need a number then 80/120 chars including whitespace
+  - [5.13](#5.13) <a name='5.13'></a> There is no hard limit on line length but be reasonable. If you need a number then 80 or 120 characters, including whitespace, are common restrictions.
 
-  - [5.14](#5.14) <1 name='5.14'></a> split line positioning for expressions and methods:
+  - [5.14](#5.14) <1 name='5.14'></a> Split line positioning for expressions and methods:
   ```javascript
   var someExpression = Expression1
       + Expression2
@@ -237,9 +237,9 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   }
   ```
   
-  - [7.2](#7.2) <a name='7.2'></a> always use strict equality checks (===), the only situation where you may use a loose inequality operator (==) is if you are checking for something that could be null or undefined by way of ==null, such as in the case of uninitialized variables
+  - [7.2](#7.2) <a name='7.2'></a> Always use strict equality checks (===). The only situation where you may use a loose inequality operator (==) is if you are checking for something that could be null or undefined by way of ==null, such as in the case of uninitialized variables.
 
-  - [7.3](#7.3) <a name='7.3'></a> You can emulate enums in the style of C by using a single object as a holder for all your constants, naturally in all caps. This isn't really a requirement, I'm just kind of drunk and this is in my notes.
+  - [7.3](#7.3) <a name='7.3'></a> You can emulate enums in the style of C by using a single object as a holder for all your constants, naturally in all caps.
   ```javascript
   var randomEnum {
     ONE_THING: 0,
@@ -248,7 +248,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   }
   ```
   
-  - [7.4](#7.4) <a name='7.4'></a> here's a singleton pattern from somewhere on stackoverflow? I think ・ singletons are useful for objects that have state
+  - [7.4](#7.4) <a name='7.4'></a> Singletons are useful for objects that have state.
   ```javascript
   var pezDispenser = (function() {
     var amount = 20;
@@ -267,7 +267,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   pezDispenser.dispense();
   ```
   Simply name the function and refrain from invoking it immediately and you have what amounts to a constructor.
+  
+  - [7.5](#7.5) <a name='7.5'></a> [Don't use eval()](http://stackoverflow.com/questions/86513/why-is-using-the-javascript-eval-function-a-bad-idea).
 
-
-CONVENTIONS -> DOCUMENTATION -> CLASS/MODULE/COMPONENT/ENTITY SKELETON
-
+  - [7.6](#7.6) <a name='7.6'></a> Don't pass strings to setInterval() or setTimeout(). Passing in strings is both painfully slow and potentially insecure. Pass in a function reference instead.
