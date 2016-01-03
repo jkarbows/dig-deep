@@ -1,5 +1,5 @@
 var Dungeon = {
-    map: null,
+    map: [],
     map_size: 64,
     rooms: [],
     Generate: function () {
