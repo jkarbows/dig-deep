@@ -69,6 +69,13 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   - [3.5](#3.5) <a name='3.5'></a> Avoid magic numbers, use named constants. Program for the future.
   
   - [3.6](#3.6) <a name='3.6'></a> Use CamelCase for class names and mixedCase for method and property names.
+  ```javascript
+  //bad
+  unitPos_X
+  
+  //good
+  unitPositionX
+  ```
   
   - [3.7](#3.7) <a name='3.7'></a> Method names should be verbs.
   
