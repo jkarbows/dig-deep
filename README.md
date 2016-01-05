@@ -148,6 +148,8 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
 
   - ###[CSS](#CSS)
   CSS files should follow the same set of conventions( the rules are:each selector is on a new line, the opening curly brace is preceded by a space, the key value pairs have a space after the colon, every block is followed by an empty new line)
+  ```javascript
+  ```
 
 ## Declarations
 
@@ -174,6 +176,8 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   - [5.2](#5.2) <a name='5.2'></a> Related variables of the same type should be declared in a common statement. Unrelated variables or those of different type must have a separate var declaration.
   
   - [5.3](#5.3) <a name='5.3'></a> Floating point constants should always be named with at least one number before and after the decimal point.
+  ```javascript
+  ```
   
   - [5.4](#5.4) <a name='5.4'></a> An effort should be made to contain scope for the purpose of keeping variables alive for the smallest amount of time possible.
   
@@ -182,6 +186,8 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   - [5.6](#5.6) <a name='5.6'></a> No preceding space on commas or semicolons.
   
   - [5.7](#5.6) <a name='5.7'></a> No whitespace at eol or on blank lines.
+  ```javascript
+  ```
   
   - [5.8](#5.8) <a name='5.8'></a> Unary operators(!, ++) should not have a space next to their operator.
   
@@ -190,9 +196,13 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   - [5.9](#5.9) <a name='5.9'></a> Avoid filler spaces, especially in empty constructs({}, [], function()).
   
   - [5.10](#5.10) <a name='5.10'></a> Assignment operators should have a space on either side.
-  
+  ```javascript
+  ```
+
   - [5.11](#5.11) <a name='5.11'></a> Ternary conditionals should have a space on either side of their operators.
-  
+  ```javascript
+  ```
+
   - [5.12](#5.12) <a name='5.12'></a> Logical units within a block should be separated by one blank line.
   
   - [5.13](#5.13) <a name='5.13'></a> There is no hard limit on line length but be reasonable. If you need a number then 80 or 120 characters, including whitespace, are common restrictions.
