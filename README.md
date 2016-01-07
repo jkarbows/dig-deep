@@ -42,8 +42,10 @@ A certain amount of familiarity with the JavaScript language and programming in 
   - [1.2](#1.2) <a name='1.2'></a> In keeping with this, we should also minimize our use of external libraries. This is for the sake of simplicity in reasoning about the code, as well as forcing us to actually know what we're doing and reducing the number of bugs caused by third-party code. The majority of our code should be written by us.
   
   - [1.3](#1.3) <a name='1.3'></a> Write with the intent of producing readable code. Expect that someone else will have to read and understand your code at some point. Use the correct [whitespace](#whitespace) and formatting to ensure readabililty. Finished code will be [minified](https://en.wikipedia.org/wiki/Minification_(programming)), so just write nicely.
-  
-  - [1.4](#1.4) <a name='1.4'></a> Use [JSHint](http://jshint.com/) for linting. Linting helps to detect and fix errors, and is considered good practice.
+
+  - [1.4](#1.4) <a name='1.4></a> If it wasn't already obvious from the webpage you're likely viewing this from, our projects will be managed through [github](https://github.com/). If you aren't familiar with github, [here's a quick primer](http://rogerdudler.github.io/git-guide/). You should have a basic understanding of git, it's simple and useful. 
+
+  - [1.5](#1.5) <a name='1.5'></a> Use [JSHint](http://jshint.com/) for linting. Linting helps to detect and fix errors, and is considered good practice.
   
 ## Choices
   
@@ -66,9 +68,14 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [3.4](#3.4) <a name='3.4'></a> Don't obfuscate names, for example by removing all vowels. Understandable abbreviations are acceptable, but in general should be avoided. The main point is to keep it humanly readable.
   
-  - [3.5](#3.5) <a name='3.5'></a> Avoid magic numbers, use named constants. Program for the future.
+  - [3.5](#3.5) <a name='3.5'></a> Avoid magic numbers, use named constants. Program for the future. Constants should be named in all caps, with underscores used to separate words.
+  ```javascript
+  SOME_CONSTANT
+  ```
   
   - [3.6](#3.6) <a name='3.6'></a> Use CamelCase for class names and mixedCase for method and property names.
+  
+  - [3.7](#3.7) <a name='3.7'></a> Don't use the underscore character, except as noted in [3.5](#3.5) and [3.9](#3.9).
   ```javascript
   //bad
   unitPos_X
@@ -77,11 +84,11 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   unitPositionX
   ```
   
-  - [3.7](#3.7) <a name='3.7'></a> Method names should be verbs.
+  - [3.8](#3.8) <a name='3.8'></a> Method names should be verbs.
   
-  - [3.8](#3.8) <a name='3.8'></a> Methods and properties that are determined to be private should be prepended with an underscore (_)
+  - [3.9](#3.9) <a name='3.9'></a> Methods and properties that are determined to be private should be prepended with an underscore (_)
 
-  - [3.9](#3.9) <a name='3.8'></a> Use is or has/can/should for boolean variables and methods. Avoid negated booleans.
+  - [3.10](#3.10) <a name='3.10'></a> Use is or has/can/should for boolean variables and methods. Avoid negated booleans.
   ```javascript
   //bad
   isNotThing
@@ -90,17 +97,17 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   isThing
   ```
   
-  - [3.10](#3.10) <a name='3.10'></a> Use compute when naming functions that perform computations.
+  - [3.11](#3.11) <a name='3.11'></a> Use compute when naming functions that perform computations.
   
-  - [3.11](#3.11) <a name='3.11'></a> Use find when naming functions that looks up some value.
+  - [3.12](#3.12) <a name='3.12'></a> Use find when naming functions that looks up some value.
   
-  - [3.12](#3.12) <a name='3.12'></a> Methods may be named after what they return. If the return void instead of an object then after what they do.
+  - [3.13](#3.13) <a name='3.13'></a> Methods may be named after what they return. If the return void instead of an object then after what they do.
   
-  - [3.13](#3.13) <a name='3.13'></a> Collections should be plural.
+  - [3.14](#3.14) <a name='3.14'></a> Collections should be plural.
   
-  - [3.14](#3.14) <a name='3.14'></a> Iterators should be named i, j, k, etc. They should be defined in the loop constructor. It's significantly more readable than anticipating variable hoisting.
+  - [3.15](#3.15) <a name='3.15'></a> Iterators should be named i, j, k, etc. They should be defined in the loop constructor. It's significantly more readable than anticipating variable hoisting.
   
-  - [3.15](#3.15) <a name='3.15'></a> Avoid checking for array length in every iteration of a loop. Set another variable to hold the length in the loop constructor.
+  - [3.16](#3.16) <a name='3.16'></a> Avoid checking for array length in every iteration of a loop. Set another variable to hold the length in the loop constructor.
   ```javascript
   var names = ['George', 'Ringo', 'Paul', 'John'];
   for(var i = 0, j = names.length; i < j; i++) {
@@ -108,13 +115,13 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   }
   ```
 
-  - [3.16](#3.16) <a name='3.16'></a> Generic variables should have the same name as their type.
+  - [3.17](#3.17) <a name='3.17'></a> Generic variables should have the same name as their type.
   ```javascript
   //where topic is of type Topic
   setTopic(topic)
   ```
 
-  - [3.17](#3.17) <a name='3.17'></a> Initialization methods should be named init().
+  - [3.18](#3.18) <a name='3.18'></a> Initialization methods should be named init().
   ```javascript
   //good
   init()
@@ -127,7 +134,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   run()
   ```
 
-  - [3.18](#3.18) <a name='3.18'></a> Don’t use “that” to refer to an outer “this”. Use the name of the class instead (with first char lowercased).
+  - [3.19](#3.19) <a name='3.19'></a> Don’t use “that” to refer to an outer “this”. Use the name of the class instead (with first char lowercased).
   ```javascript
   var MyObject = Class.extend({
       _constructor: function() {
@@ -177,6 +184,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [5.3](#5.3) <a name='5.3'></a> Floating point constants should always be named with at least one number before and after the decimal point.
   ```javascript
+  var position.x = 0.0;
   ```
   
   - [5.4](#5.4) <a name='5.4'></a> An effort should be made to contain scope for the purpose of keeping variables alive for the smallest amount of time possible.
@@ -187,6 +195,7 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [5.7](#5.6) <a name='5.7'></a> No whitespace at eol or on blank lines.
   ```javascript
+  //this is important
   ```
   
   - [5.8](#5.8) <a name='5.8'></a> Unary operators(!, ++) should not have a space next to their operator.
@@ -197,10 +206,12 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [5.10](#5.10) <a name='5.10'></a> Assignment operators should have a space on either side.
   ```javascript
+  frame = i;
   ```
 
-  - [5.11](#5.11) <a name='5.11'></a> Ternary conditionals should have a space on either side of their operators.
+  - [5.11](#5.11) <a name='5.11'></a> [Ternary conditionals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) should have a space on either side of their operators.
   ```javascript
+  condition ? expr1 : expr2 
   ```
 
   - [5.12](#5.12) <a name='5.12'></a> Logical units within a block should be separated by one blank line.
