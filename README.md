@@ -43,7 +43,7 @@ A certain amount of familiarity with the JavaScript language and programming in 
   
   - [1.3](#1.3) <a name='1.3'></a> Write with the intent of producing readable code. Expect that someone else will have to read and understand your code at some point. Use the correct [whitespace](#whitespace) and formatting to ensure readabililty. Finished code will be [minified](https://en.wikipedia.org/wiki/Minification_(programming)), so just write nicely.
 
-  - [1.4](#1.4) <a name='1.4></a> If it wasn't already obvious from the webpage you're likely viewing this from, our projects will be managed through [github](https://github.com/). If you aren't familiar with github, [here's a quick primer](http://rogerdudler.github.io/git-guide/). You should have a basic understanding of git, it's simple and useful. 
+  - [1.4](#1.4) <a name='1.4'></a> If it wasn't already obvious from the webpage you're likely viewing this from, our projects will be managed through [github](https://github.com/). If you aren't familiar with github, [here's a quick primer](http://rogerdudler.github.io/git-guide/). You should have a basic understanding of git, it's simple and useful. 
 
   - [1.5](#1.5) <a name='1.5'></a> Use [JSHint](http://jshint.com/) for linting. Linting helps to detect and fix errors, and is considered good practice.
   
@@ -154,8 +154,20 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   ```
 
   - ###[CSS](#CSS)
-  CSS files should follow the same set of conventions( the rules are:each selector is on a new line, the opening curly brace is preceded by a space, the key value pairs have a space after the colon, every block is followed by an empty new line)
-  ```javascript
+  CSS files follow basically the same set of conventions as javascript.
+    - Each selector is on a new line
+    - The opening curly brace is preceded by a space
+    - The key value pairs have a space after the colon
+    - Every block is followed by an empty new line
+  ```
+  .className {
+    color: red;
+  }
+
+  .className,
+  #anId {
+    color: blue;
+  }
   ```
 
 ## Declarations
