@@ -1,5 +1,9 @@
+//location marked with 0:
+//location marked with 1:
+//location marked with 2:
+
 var Dungeon = {
-    map: null,
+    map: [],
     map_size: 64,
     rooms: [],
     Generate: function () {
@@ -143,7 +147,7 @@ var Dungeon = {
         return this.map;
     },
     GetSize: function(){
-        return this.size;
+        return this.map_size;
     }
 }
  
@@ -152,5 +156,3 @@ var Helpers = {
         return~~ (Math.random() * (high - low)) + low;
     }
 };
- 
-//Dungeon.Generate();

@@ -1,4 +1,3 @@
-//hey Eddie I told you I extended the math class
 //seeded random number gen
 Math.seed = 6;
 Math.seededRandom = function (max, min) {
