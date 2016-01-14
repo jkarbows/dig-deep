@@ -88,7 +88,7 @@ var World = {
     //World.map = map;
     mapSize = Dungeon.GetSize();
     
-    wallShape = new THREE.BoxGeometry(World.constants.wallScale, WALL_HEIGHT, World.constants.wallScale);
+    wallShape = new THREE.BoxGeometry(World.constants.wallScale, World.constants.WALL_HEIGHT, World.constants.wallScale);
     wallMaterial = new THREE.MeshLambertMaterial(World.constants.wallColor);
     
     //wall
