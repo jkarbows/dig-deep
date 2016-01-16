@@ -1,5 +1,6 @@
 //world.js
 var World = {
+  
   constants: {
     cameraPosY: 6,
     camerFOV: 60,
@@ -16,7 +17,6 @@ var World = {
     lightsIntensity: 0.7,
     
     wallScale: 15,
-    WALL_HEIGHT: 20,
     wallColor: {color: 0xE393E6}
   },
   
@@ -51,7 +51,7 @@ var World = {
     World.scene.fog = new THREE.FogExp2(World.constants.fogColor, World.constants.fogDensity);
     
     //Axis helper r=+x,g=+y,b=+z
-    //World.scene.add(new THREE.AxisHelper(16));
+    World.scene.add(new THREE.AxisHelper(16));
   },
   
   initRenderer: function() {
@@ -74,11 +74,11 @@ var World = {
  
   initCamera: function() {
     World.camera = new THREE.PerspectiveCamera(
-      World.constants.cameraFOV,
+      World.constants.camerFOV,
       World.constants.cameraPerspective,
       World.constants.cameraNear,
       World.constants.cameraFar);
-      World.camera.position.y = World.constants.cameraPos_Y;
+      World.camera.position.y = World.constants.cameraPosY;
   },
   
   initMap: function() { 
@@ -104,13 +104,13 @@ var World = {
       }
     }
     
-    //TODO: floor   
+    //TODO: floor
   },
  
   render: function() {
     requestAnimationFrame(World.render); //calls render function again
-    InputHandler.update();
-    World.renderer.render(World.scene, World.camera);
+		InputHandler.update();
+		World.renderer.render(World.scene, World.camera);
   }
   
 };

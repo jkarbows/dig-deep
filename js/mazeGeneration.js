@@ -156,3 +156,5 @@ var Helpers = {
         return~~ (Math.random() * (high - low)) + low;
     }
 };
+ 
+//Dungeon.Generate();

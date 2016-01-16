@@ -8,7 +8,7 @@ var InputHandler = {
   
   movementVector: new THREE.Vector3(0, 0, 0),
   rotationVector: new THREE.Vector3(0, 0, 0),
-
+  
   moveState: {
     left: 0, right: 0,
     forward: 0, backward: 0,
