@@ -5,9 +5,9 @@ var Player = {
       playerHeight: 8,
       playerDepth: 4,
       
-      playerPos_X: 40,
+      playerPos_X: 48,
       playerPos_Y: 2,
-      playerPos_Z: 80,
+      playerPos_Z: 96,
       
       lookAt_X: 0,
       lookAt_Y: 0,

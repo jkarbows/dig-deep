@@ -1,9 +1,9 @@
 //world.js
 var World = {
   constants: {
-    cameraPos_Y: 6,
-    cameraFOV: 60,
-    cameraPerspective: (window.innerWidth / window.innerHeight),
+    cameraPosY: 6,
+    camerFOV: 60,
+    cameraPerspective: (window.innerWidth/window.innerHeight),
     cameraNear: 0.1,
     cameraFar: 500,
     
@@ -16,7 +16,7 @@ var World = {
     lightsIntensity: 0.7,
     
     wallScale: 15,
-	WALL_HEIGHT: 20,
+    WALL_HEIGHT: 20,
     wallColor: {color: 0xE393E6}
   },
   
@@ -85,10 +85,9 @@ var World = {
       //i don't like this implimentation, it should change when the Dungeon file changes. 
       //No need to have === operator when javascript truthyness exists
     map = Dungeon.GetMap();
-    //World.map = map;
     mapSize = Dungeon.GetSize();
     
-    wallShape = new THREE.BoxGeometry(World.constants.wallScale, World.constants.WALL_HEIGHT, World.constants.wallScale);
+    wallShape = new THREE.BoxGeometry(World.constants.wallScale, 20, World.constants.wallScale); //20 is wall height
     wallMaterial = new THREE.MeshLambertMaterial(World.constants.wallColor);
     
     //wall
