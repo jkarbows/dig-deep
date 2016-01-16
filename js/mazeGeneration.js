@@ -1,3 +1,7 @@
+//location marked with 0:
+//location marked with 1:
+//location marked with 2:
+
 var Dungeon = {
     map: [],
     map_size: 64,
@@ -143,7 +147,7 @@ var Dungeon = {
         return this.map;
     },
     GetSize: function(){
-        return this.size;
+        return this.map_size;
     }
 }
  
