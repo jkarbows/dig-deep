@@ -21,6 +21,7 @@ var InputHandler = {
     //translation
     //TODO: handle through physics
     //TODO: if multiple directions, divide movement speed by two, then take square root first
+	Physics.stopCollision(InputHandler.movementVector);
     Player.entity.translateX(InputHandler.movementVector.x);
     Player.entity.translateZ(InputHandler.movementVector.z);
 

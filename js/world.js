@@ -1,7 +1,7 @@
 //world.js
 var World = {
   constants: {
-    cameraPos_Y: 6,
+    cameraPosY: 6,
     cameraFOV: 60,
     cameraPerspective: (window.innerWidth / window.innerHeight),
     cameraNear: 0.1,
@@ -78,7 +78,7 @@ var World = {
       World.constants.cameraPerspective,
       World.constants.cameraNear,
       World.constants.cameraFar);
-      World.camera.position.y = World.constants.cameraPos_Y;
+      World.camera.position.y = World.constants.cameraPosY;
   },
   
   initMap: function() { 
