@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset=utf-8>
-    <title>Dig Deep</title>
+<html lang="en-US">
+<head>
+  <meta charset=utf-8>
+  <title>Dig Deep</title>
     
-    <style>
-      body { margin: 0; overflow: hidden; }
-      canvas { width: 100%; height: 100% }
-    </style>
-    
-  </head>
-  
-  <body>
-  
-    <audio id = "alarm">
-      <source src = "aud/alarm.wav"/>
-    </audio>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { width: 100%; height: 100% }
+  </style>    
+</head>
 
-    <audio id = "shovel">
-      <source src = "aud/shovel.wav" type="audio/wav"/>
-    </audio>
-
-    <audio id = "music" autoplay loop>
-      <source src = "aud/music.wav" type="audio/wav"/>
-    </audio>
-    
-    <script src="js/three.min.js"></script>
-    
-    <script src="js/world.js"></script>
-    
-    <script src="js/player.js"></script>
-    
-    <script src="js/inputHandler.js"></script>
-    
-    <script>
-      World.init();
-    </script>
-    
-  </body>
+<body>
   
+  <audio id="alarm">
+    <source src="aud/alarm.wav" />
+  </audio>
+
+  <audio id="shovel">
+    <source src="aud/shovel.wav" type="audio/wav" />
+  </audio>
+
+  <audio id="bg" autoplay loop>
+    <!--<source src = "aud/bg.wav" type="audio/wav" />-->
+  </audio>
+
+  <script src="js/three.min.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/inputHandler.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/mazeGeneration.js"></script>
+    
+  <script>
+    World.init();
+  </script>
+  
+</body> 
 </html>
