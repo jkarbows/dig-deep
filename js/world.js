@@ -2,7 +2,7 @@
 var World = {
   
   constants: {
-    cameraPos_Y: 6,
+    cameraPosY: 6,
     camerFOV: 60,
     cameraPerspective: (window.innerWidth/window.innerHeight),
     cameraNear: 0.1,
@@ -51,7 +51,7 @@ var World = {
     World.scene.fog = new THREE.FogExp2(World.constants.fogColor, World.constants.fogDensity);
     
     //Axis helper r=+x,g=+y,b=+z
-    //World.scene.add(new THREE.AxisHelper(16));
+    World.scene.add(new THREE.AxisHelper(16));
   },
   
   initRenderer: function() {
@@ -78,14 +78,13 @@ var World = {
       World.constants.cameraPerspective,
       World.constants.cameraNear,
       World.constants.cameraFar);
-      World.camera.position.y = World.constants.cameraPos_Y;
+      World.camera.position.y = World.constants.cameraPosY;
   },
   
   initMap: function() { 
       //i don't like this implimentation, it should change when the Dungeon file changes. 
       //No need to have === operator when javascript truthyness exists
     map = Dungeon.GetMap();
-    //World.map = map;
     mapSize = Dungeon.GetSize();
     
     wallShape = new THREE.BoxGeometry(World.constants.wallScale, 20, World.constants.wallScale); //20 is wall height
@@ -105,7 +104,7 @@ var World = {
       }
     }
     
-    //TODO: floor   
+    //TODO: floor
   },
  
   render: function() {
