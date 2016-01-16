@@ -91,5 +91,4 @@ var Player = {
 		scene.add(shovel);
 		scene.add(handle);
     */
-    
 };
