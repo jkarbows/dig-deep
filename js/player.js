@@ -5,9 +5,9 @@ var Player = {
       playerHeight: 8,
       playerDepth: 4,
       
-      playerPos_X: 40,
+      playerPos_X: 48,
       playerPos_Y: 2,
-      playerPos_Z: 80,
+      playerPos_Z: 96,
       
       lookAt_X: 0,
       lookAt_Y: 0,
@@ -73,4 +73,23 @@ var Player = {
       Player.init();
       return Player.entity;
     })
+    
+		/*		
+		//SHOVEL
+		var triangleS = new THREE.Shape();
+		triangleS.moveTo(0,0);
+		triangleS.lineTo(4,8);
+		triangleS.lineTo(12,8);
+		triangleS.lineTo(8,2);
+		var shovelGeo = new THREE.ShapeGeometry(triangleS);
+		var shovelMat = new THREE.MeshPhongMaterial({color:0xFAFAD2});
+		shovelMat.metal = true;
+		var shovel = new THREE.Mesh(shovelGeo, shovelMat);
+		var handleGeo = new THREE.CylinderGeometry(0.2,0.2,2);
+		var handleMat = new THREE.MeshBasicMaterial({color:0x8B4513});
+		var handle = new THREE.Mesh(handleGeo, handleMat);
+		scene.add(shovel);
+		scene.add(handle);
+    */
+    
 };
