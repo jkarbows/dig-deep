@@ -65,8 +65,7 @@ var Player = {
 
       Player.hands.right = right;
       Player.hands.left = left;      
-    },
-    
+    },   
     
     //call this to initilize player
     getPlayer: (function() {

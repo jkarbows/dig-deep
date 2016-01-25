@@ -23,6 +23,7 @@ var InputHandler = {
     
     //translation
     //TODO: handle through physics
+    //console.log("_y: " + Player.entity.quaternion._y + ", _w: " + Player.entity.quaternion._w); //testing
       InputHandler.movementVecter = Physics.stopCollision(InputHandler.movementVector);
       Player.entity.translateX(InputHandler.movementVector.x);
       Player.entity.translateZ(InputHandler.movementVector.z);

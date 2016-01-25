@@ -87,17 +87,24 @@ var World = {
     map = Dungeon.GetMap();
     mapSize = Dungeon.GetSize();
     
-    wallShape = new THREE.BoxGeometry(World.constants.wallScale, 20, World.constants.wallScale); //20 is wall height
+    wallShape = new THREE.BoxGeometry(World.constants.wallScale, 35, World.constants.wallScale); //20 is wall height
     wallMaterial = new THREE.MeshLambertMaterial(World.constants.wallColor);
     
     //wall
     for(z = 0; z < mapSize; z++) {
       for(x = 0; x < mapSize; x++) { //add wall blocks to positions in map-array        
         if(map[x][z] === 2) {
-          wall = new THREE.Mesh(wallShape, wallMaterial);
-          wall.position.x = x*World.constants.wallScale;
           
+          //testing
+          if((x % 2 == 0) && (z % 2 == 0)){
+            wall = new THREE.Mesh(wallShape, (new THREE.MeshLambertMaterial({color: 0xE6633E})));
+          } else{
+            wall = new THREE.Mesh(wallShape, wallMaterial);
+          }//testing
+          
+          wall.position.x = x*World.constants.wallScale;
           wall.position.z = z*World.constants.wallScale;
+          
           World.scene.add(wall);
           World.obstacles.push(wall);
         }
@@ -109,6 +116,7 @@ var World = {
  
   render: function() {
     requestAnimationFrame(World.render); //calls render function again
+    //Player.bBox.update();
 		InputHandler.update();
 		World.renderer.render(World.scene, World.camera);
   }
