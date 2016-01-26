@@ -21,19 +21,11 @@ var InputHandler = {
     
     //translation
     //TODO: handle through physics
-<<<<<<< HEAD
-    //TODO: if multiple directions, divide movement speed by two, then take square root first
-	Physics.stopCollision(InputHandler.movementVector);
-    Player.entity.translateX(InputHandler.movementVector.x);
-    Player.entity.translateZ(InputHandler.movementVector.z);
-
-=======
     //console.log("_y: " + Player.entity.quaternion._y + ", _w: " + Player.entity.quaternion._w); //testing
       InputHandler.movementVecter = Physics.stopCollision(InputHandler.movementVector);
       Player.entity.translateX(InputHandler.movementVector.x);
       Player.entity.translateZ(InputHandler.movementVector.z);
-      
->>>>>>> RayWillett-master
+
     //rotation
     Player.entity.quaternion.multiply(
       new THREE.Quaternion(
