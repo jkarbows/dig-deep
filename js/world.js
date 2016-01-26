@@ -3,7 +3,7 @@ var World = {
   
   constants: {
     cameraPosY: 6,
-    camerFOV: 60,
+    cameraFOV: 60,
     cameraPerspective: (window.innerWidth/window.innerHeight),
     cameraNear: 0.1,
     cameraFar: 500,
@@ -74,7 +74,7 @@ var World = {
  
   initCamera: function() {
     World.camera = new THREE.PerspectiveCamera(
-      World.constants.camerFOV,
+      World.constants.cameraFOV,
       World.constants.cameraPerspective,
       World.constants.cameraNear,
       World.constants.cameraFar);
@@ -87,7 +87,7 @@ var World = {
     map = Dungeon.GetMap();
     mapSize = Dungeon.GetSize();
     
-    wallShape = new THREE.BoxGeometry(World.constants.wallScale, 35, World.constants.wallScale); //20 is wall height
+    wallShape = new THREE.BoxGeometry(World.constants.wallScale, World.constants.WALL_HEIGHT, World.constants.wallScale);
     wallMaterial = new THREE.MeshLambertMaterial(World.constants.wallColor);
     
     //wall

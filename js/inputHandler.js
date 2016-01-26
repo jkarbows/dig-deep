@@ -1,5 +1,3 @@
-//inputHandler.js
-//TODO: Major todo: all movement must go through the physics filter before being applied. Mark the "apply to player" function as such
 var InputHandler = {
   constants: {
     movementSpeed: 1.0,

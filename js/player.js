@@ -50,7 +50,7 @@ var Player = {
       right = new THREE.Mesh(handShape, handMaterial);
       left = new THREE.Mesh(handShape, handMaterial);
             
-            //dont use these magic numbers here
+      //set hands relative to player position rather than arbitrarily as here
       right.position.x += 3;
       right.position.y += 2;
       right.position.z += -8;
@@ -65,29 +65,12 @@ var Player = {
 
       Player.hands.right = right;
       Player.hands.left = left;      
-    },   
+    },
+    
     
     //call this to initilize player
     getPlayer: (function() {
       Player.init();
       return Player.entity;
     })
-    
-		/*		
-		//SHOVEL
-		var triangleS = new THREE.Shape();
-		triangleS.moveTo(0,0);
-		triangleS.lineTo(4,8);
-		triangleS.lineTo(12,8);
-		triangleS.lineTo(8,2);
-		var shovelGeo = new THREE.ShapeGeometry(triangleS);
-		var shovelMat = new THREE.MeshPhongMaterial({color:0xFAFAD2});
-		shovelMat.metal = true;
-		var shovel = new THREE.Mesh(shovelGeo, shovelMat);
-		var handleGeo = new THREE.CylinderGeometry(0.2,0.2,2);
-		var handleMat = new THREE.MeshBasicMaterial({color:0x8B4513});
-		var handle = new THREE.Mesh(handleGeo, handleMat);
-		scene.add(shovel);
-		scene.add(handle);
-    */
 };
