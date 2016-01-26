@@ -17,6 +17,7 @@ var World = {
     lightsIntensity: 0.7,
     
     wallScale: 15,
+	WALL_HEIGHT: 35;
     wallColor: {color: 0xE393E6}
   },
   
