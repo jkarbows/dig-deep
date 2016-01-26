@@ -1,9 +1,10 @@
 //world.js
 var World = {
+  
   constants: {
     cameraPosY: 6,
     cameraFOV: 60,
-    cameraPerspective: (window.innerWidth / window.innerHeight),
+    cameraPerspective: (window.innerWidth/window.innerHeight),
     cameraNear: 0.1,
     cameraFar: 500,
     
@@ -16,7 +17,6 @@ var World = {
     lightsIntensity: 0.7,
     
     wallScale: 15,
-	WALL_HEIGHT: 20,
     wallColor: {color: 0xE393E6}
   },
   
@@ -51,7 +51,7 @@ var World = {
     World.scene.fog = new THREE.FogExp2(World.constants.fogColor, World.constants.fogDensity);
     
     //Axis helper r=+x,g=+y,b=+z
-    //World.scene.add(new THREE.AxisHelper(16));
+    World.scene.add(new THREE.AxisHelper(16));
   },
   
   initRenderer: function() {
@@ -85,7 +85,6 @@ var World = {
       //i don't like this implimentation, it should change when the Dungeon file changes. 
       //No need to have === operator when javascript truthyness exists
     map = Dungeon.GetMap();
-    //World.map = map;
     mapSize = Dungeon.GetSize();
     
     wallShape = new THREE.BoxGeometry(World.constants.wallScale, World.constants.WALL_HEIGHT, World.constants.wallScale);
@@ -95,23 +94,31 @@ var World = {
     for(z = 0; z < mapSize; z++) {
       for(x = 0; x < mapSize; x++) { //add wall blocks to positions in map-array        
         if(map[x][z] === 2) {
-          wall = new THREE.Mesh(wallShape, wallMaterial);
-          wall.position.x = x*World.constants.wallScale;
           
+          //testing
+          if((x % 2 == 0) && (z % 2 == 0)){
+            wall = new THREE.Mesh(wallShape, (new THREE.MeshLambertMaterial({color: 0xE6633E})));
+          } else{
+            wall = new THREE.Mesh(wallShape, wallMaterial);
+          }//testing
+          
+          wall.position.x = x*World.constants.wallScale;
           wall.position.z = z*World.constants.wallScale;
+          
           World.scene.add(wall);
           World.obstacles.push(wall);
         }
       }
     }
     
-    //TODO: floor   
+    //TODO: floor
   },
  
   render: function() {
     requestAnimationFrame(World.render); //calls render function again
-    InputHandler.update();
-    World.renderer.render(World.scene, World.camera);
+    //Player.bBox.update();
+		InputHandler.update();
+		World.renderer.render(World.scene, World.camera);
   }
   
 };
