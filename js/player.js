@@ -25,11 +25,7 @@ var Player = {
     //shovel = ,
     
     init: function() {
-      Player.initPlayer();
-      Player.initHands();
-    },
-    
-    initPlayer: function() {
+      //create player
       playerShape = new THREE.BoxGeometry(Player.constants.playerWidth, Player.constants.playerHeight, Player.constants.playerDepth);
       playerMaterial = new THREE.MeshLambertMaterial();
       
@@ -41,9 +37,8 @@ var Player = {
       player.position.z = Player.constants.playerPos_Z;
       
       Player.entity = player;
-    },
     
-    initHands: function() {
+      //create hands
       handShape = new THREE.SphereGeometry(Player.constants.handWidth, Player.constants.handHeight, Player.constants.handDepth);
       handMaterial = new THREE.MeshPhongMaterial(Player.constants.handColor);
       

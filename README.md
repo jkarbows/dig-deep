@@ -387,7 +387,11 @@ Much like the [oxford comma](https://en.wikipedia.org/wiki/Serial_comma), there 
   
   - [7.5](#7.5) <a name='7.5'></a> [Don't use eval()](http://stackoverflow.com/questions/86513/why-is-using-the-javascript-eval-function-a-bad-idea), okay?
 
-  - [7.6](#7.6) <a name='7.6'></a> Don't pass strings to setInterval() or setTimeout(). Passing in strings is both painfully slow and potentially insecure. Pass in a function reference instead.
+  - [7.6](#7.6) <a name='7.6'></a> Don't worry about using the [new](http://stackoverflow.com/a/383503/5831292) keyword. I mean, use it, obviously, just don't be concerned that you're doing something 'bad'.
+  
+  - [7.7](#7.7) <a name='7.7'></a> If you're going to use the delete operator, make sure you [understand how it works](http://perfectionkills.com/understanding-delete/). In general it is used to remove object properties. NOT for variables, function arguments, or function identifiers. If you need to free up a reference for GC then setting it to null would be the preferred notation. Setting an object to null will also clean up all of the properties of that object.
+
+  - [7.8](#7.8) <a name='7.8'></a> Don't pass strings to setInterval() or setTimeout(). Passing in strings is both painfully slow and potentially insecure. If you pass in a string, javascript will hand it to the function constructor to be converted into a new function. Instead pass in a function reference or an anonymous function.
 
 ## 後付
 
