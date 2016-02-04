@@ -14,7 +14,7 @@ DIG.Entity = function Entity() {
   this.components = {};
   
   return this;
-}
+};
 
 DIG.Entity.prototype._count = 0;
 
@@ -22,7 +22,7 @@ DIG.Entity.prototype.addComponent = function addComponent(component) {
   this.components[component] = component;
   
   return this;
-}
+};
 
 // accepts a string or a component function
 DIG.Entity.prototype.removeComponent = function removeComponent(component) {
@@ -34,11 +34,11 @@ DIG.Entity.prototype.removeComponent = function removeComponent(component) {
   
   delete this.components[name];
   return this;
-}
+};
 
 DIG.Entity.prototype.get = function get(component) {
    return this.components[component];
-}
+};
 
 DIG.Entity.prototype.has = function has(component) {
   var name = component;
@@ -48,7 +48,7 @@ DIG.Entity.prototype.has = function has(component) {
   }
   //this might need to be set to return true or false if name === null or something
   return this.components.name;
-}
+};
 
 // accepts an array
 DIG.Entity.prototype.hasAll(components){
@@ -60,9 +60,9 @@ DIG.Entity.prototype.hasAll(components){
   }
 
   return true;
-}
+};
 
 DIG.Entity.prototype.print = function print() {
   console.log(JSON.stringify(this, null, 2));
   return this;
-}
+};

@@ -15,7 +15,7 @@ DIG.Components.componentName = function componentName(value) {
   this.value = value;
   
   return this;
-}
+};
 DIG.Components.componentName.prototype.name = 'componentName';
 
 DIG.Components.physics = function physics() {
@@ -31,6 +31,6 @@ DIG.Components.physics = function physics() {
     z:0
   }
   return this;
-}
+};
 DIG.Components.physics.prototype.name = 'physics';
 
