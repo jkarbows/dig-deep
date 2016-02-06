@@ -4,8 +4,8 @@ Originally created as an an entry to the 2015 EMU hackathon, Dig Deep is a first
 
 We've decided to continue development of Dig Deep to gain experience in distributing a full JavaScript application, as well as in visualising sets of data of three.js for use in future projects.
 
-For the version presented at the hackathon, see [here](http://people.emich.edu/jkarbows/hackathon/).
-For the currect testing version, see [here](http://people.emich.edu/jkarbows/dig-deep/).
+For the version presented at the hackathon, see [here](http://people.emich.edu/jkarbows/hackathon/).<br>
+For the current testing version, see [here](http://people.emich.edu/jkarbows/dig-deep/).
 
 If you're looking for the style guide, it's been moved to [its own repo](https://github.com/jkarbows/javascript-style).
 
